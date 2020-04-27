@@ -1,0 +1,19 @@
+{
+  "name": "server_side",
+  "version": "1.0.0",
+  "description": "Back_End for Shopping Kart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deep-muni94/Shopping-Kart.git"
+  },
+  "author": "Deep Muni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deep-muni94/Shopping-Kart/issues"
+  },
+  "homepage": "https://github.com/deep-muni94/Shopping-Kart#readme"
+}
