@@ -1,1 +1,13 @@
-<p>nav-bar works!</p>
+<nav class="navbar">
+  <ul class="left">
+    <li *ngFor="let item of itemsLeft">
+      <a routerLink="{{item.url}}" routerLinkActive="active">{{item.name}}</a></li>
+  </ul>
+  <div id="search-bar">
+    <input type="search" id="search">
+  </div>
+  <ul class="right">
+    <li *ngFor="let item of itemsRight">
+      <a routerLink="{{item.url}}" routerLinkActive="active">{{item.name}}</a></li>
+  </ul>
+</nav>
