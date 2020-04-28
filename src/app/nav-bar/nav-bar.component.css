@@ -36,5 +36,6 @@ a:hover{
 }
 
 #search{
+  height: 30px;
   width: 500px;
 }
