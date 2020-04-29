@@ -1,0 +1,28 @@
+<div id="filters-div">
+</div>
+
+<div id="item-box" >
+    <ul id="ul-id">
+    <li id="list-item" *ngFor="let item of item_list;">
+            <img id="item-image" src="{{item.item_url}}"/>
+            <div id="item-text"><a href=""><p>{{item.item_name}}</p></a></div>
+            <div id="item-price" *ngFor="let brand of item.brand;">
+                <p id="brand-name"><a href="{{brand.url}}">{{brand.name}}</a></p>
+                <div id="price-details">
+                    <b>{{brand.price}}</b>
+                    <a id="wishlist" href="">Add to Wishlist</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="pagination">
+    <a href="" >&laquo;</a>
+    <a class="active" href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+    <a href="">4</a>
+    <a href="">5</a>
+    <a href="">&raquo;</a>
+</div>
