@@ -1,13 +1,25 @@
-<nav class="navbar">
-  <ul class="left">
-    <li *ngFor="let item of itemsLeft">
-      <a routerLink="{{item.url}}" routerLinkActive="active">{{item.name}}</a></li>
-  </ul>
-  <div id="search-bar">
-    <input type="search" id="search">
+<div class="navbar" #navbar>
+  <img src="../../assets/images/menu_light.png" alt="option" (click)="showPanel(panel, navbar, search)"/>
+  <div class="search-bar" #search>
+    <div class="search">
+      <input type="text" id="search">
+    </div>
+    <div class="search-icon"></div>
   </div>
-  <ul class="right">
-    <li *ngFor="let item of itemsRight">
-      <a routerLink="{{item.url}}" routerLinkActive="active">{{item.name}}</a></li>
+  <div class="right">
+    <ul>
+      <li *ngFor="let item of itemsRight">
+        <a routerLink="{{item.url}}" routerLinkActive="active" class="right-link">{{item.name}}</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="side-panel" #panel>
+  <ul>
+    <li *ngFor="let item of itemsLeft" class="item">
+      <div class="label">{{item.name}}</div>
+      <div class="arrow"></div>
+      <a routerLink="{{item.url}}" routerLinkActive="active" class="link"></a>
+    </li>
   </ul>
-</nav>
+</div>

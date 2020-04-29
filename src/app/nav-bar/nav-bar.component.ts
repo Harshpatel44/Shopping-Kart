@@ -6,16 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  public hamburger_url = "../../assets/images/hamburger.jpg"
   public itemsLeft = [
     {'name': 'Home', 'url': ''},
-    {'name': 'Show', 'url': ''},
-    {'name': 'About Us', 'url': 'aboutUs'},
-    {'name': 'Contact Us', 'url': 'contactUs'}
+    {'name': 'Category', 'url': 'category'},
+    {'name': 'Account', 'url': 'account'},
   ];
 
   public itemsRight = [
-    {'name': 'Reset', 'url': 'reset'},
     {'name': 'Login', 'url': 'login'},
     {'name': 'Register', 'url': 'register'}
   ];
@@ -23,6 +20,12 @@ export class NavBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showPanel(panel, navbar, search){
+    panel.classList.toggle("show-panel");
+    navbar.classList.toggle("adjust-radius");
+    search.classList.toggle("search-move");
   }
 
 }
